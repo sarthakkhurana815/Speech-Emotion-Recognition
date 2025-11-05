@@ -1,76 +1,79 @@
-🎙️ Speech Emotion Recognition (SER)
+# 🎙️ Speech Emotion Recognition (SER)
 
-This project focuses on detecting human emotions from speech using deep learning. The model learns emotional cues such as tone, pitch, and energy from audio signals to classify them into predefined emotional states.
+This project focuses on **detecting human emotions from speech** using deep learning. The model learns emotional cues such as tone, pitch, and energy from audio signals to classify them into predefined emotional states.
 
-🧠 Overview
+---
 
-This repository implements a hybrid CNN + LSTM architecture for Speech Emotion Recognition (SER) on the RAVDESS Emotional Speech Audio Dataset
-.
-It extracts key acoustic features — MFCC, Chroma, and Mel Spectrograms — to capture both spectral and temporal characteristics of speech.
+## 🧠 Overview
 
-🏗️ Model Architecture
+This repository implements a **hybrid CNN + LSTM architecture** for **Speech Emotion Recognition (SER)** on the [RAVDESS Emotional Speech Audio Dataset](https://www.kaggle.com/datasets/uwrfkaggler/ravdess-emotional-speech-audio).  
+It extracts key acoustic features — **MFCC**, **Chroma**, and **Mel Spectrograms** — to capture both spectral and temporal characteristics of speech.
+
+---
+
+## 🏗️ Model Architecture
 
 The SER model is composed of:
 
-Feature Extraction
+1. **Feature Extraction**
+   - Mel-Frequency Cepstral Coefficients (MFCCs)
+   - Chroma Features
+   - Mel Spectrograms
 
-Mel-Frequency Cepstral Coefficients (MFCCs)
+2. **Deep Learning Pipeline**
+   - **CNN Layers** → capture spatial feature maps from spectrograms.  
+   - **LSTM Layers** → model temporal dependencies in speech signals.  
+   - **Dense Layers** → classify emotion from learned features.  
 
-Chroma Features
+3. **Output Classes (8 Emotions):**
+   - Neutral  
+   - Calm  
+   - Happy  
+   - Sad  
+   - Angry  
+   - Fearful  
+   - Disgust  
+   - Surprised  
 
-Mel Spectrograms
+---
 
-Deep Learning Pipeline
+## 📊 Results
 
-CNN Layers → capture spatial feature maps from spectrograms.
-
-LSTM Layers → model temporal dependencies in speech signals.
-
-Dense Layers → classify emotion from learned features.
-
-Output Classes (8 Emotions):
-
-Neutral
-
-Calm
-
-Happy
-
-Sad
-
-Angry
-
-Fearful
-
-Disgust
-
-Surprised
-
-📊 Results
-Metric	Score
-Training Accuracy	98.3%
-Validation Accuracy	86.5%
-Best Validation Loss	0.6761
-Best Epoch (Early Stopping)	29 / 100
+| Metric | Score |
+| --- | --- |
+| **Training Accuracy** | 98.3% |
+| **Validation Accuracy** | 86.5% |
+| **Best Validation Loss** | 0.6761 |
+| **Best Epoch (Early Stopping)** | 29 / 100 |
 
 Early stopping was used to minimize overfitting by monitoring validation loss.
 
-Model Insight:
+**Model Insight:**  
 The CNN effectively captures emotional nuances in spectrograms, while the LSTM models the time-series emotion flow, resulting in robust recognition performance.
 
-🖼️ Visualizations
+---
+
+## 🖼️ Visualizations
 
 Training and validation metrics:
 
-🚀 How to Run
-1️⃣ Clone the Repository
+![Training Accuracy and Loss](image_5fac41.jpg)
+
+---
+
+## 🚀 How to Run
+
+### 1️⃣ Clone the Repository
+```bash
 git clone https://github.com/<your-username>/Speech-Emotion-Recognition.git
 cd Speech-Emotion-Recognition
+
 
 2️⃣ Create and Activate Environment
 python -m venv venv
 source venv/bin/activate  # Mac/Linux
 .\venv\Scripts\activate   # Windows
+
 
 3️⃣ Install Dependencies
 pip install -r requirements.txt
@@ -93,6 +96,7 @@ Audio Processing	Librosa
 Data Handling	NumPy, Pandas
 Visualization	Matplotlib, Seaborn
 Dataset	RAVDESS
+
 📁 Project Structure
 Speech-Emotion-Recognition/
 │
@@ -103,7 +107,7 @@ Speech-Emotion-Recognition/
 ├── features/                  # Extracted MFCCs and spectrograms
 └── models/                    # Saved model weights
 
-🧩 Future Improvements
+🌱 Future Improvements
 
 Integrate attention mechanisms to enhance temporal feature learning
 
