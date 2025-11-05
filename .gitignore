@@ -1,0 +1,12 @@
+# Python virtual environment
+venv/
+
+# Large Dataset folder
+RAVDESS DATASET/
+RAVDESS DATASET.zip
+
+# Jupyter internal files
+.ipynb_checkpoints/
+
+# Mac system files
+.DS_Store

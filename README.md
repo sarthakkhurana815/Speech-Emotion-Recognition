@@ -64,8 +64,8 @@ Training and validation metrics:
 
 ## 🚀 How to Run
 
-### 🧩 Step 1️⃣ — Clone the Repository
-```bash
+ 🧩 Step 1️⃣ — Clone the Repository
+
 git clone https://github.com/sarthakkhurana815/Speech-Emotion-Recognition.git
 cd Speech-Emotion-Recognition
 
@@ -87,7 +87,7 @@ Extract audio features
 
 Train and evaluate the CNN+LSTM model
 
-🧩 Tech Stack
+### 🧩 Tech Stack
 | Category             | Tools               |
 | -------------------- | ------------------- |
 | **Language**         | Python              |
@@ -98,7 +98,7 @@ Train and evaluate the CNN+LSTM model
 | **Dataset**          | RAVDESS             |
 
 
-📁 Project Structure
+### 📁 Project Structure
 
 Speech-Emotion-Recognition/
 │
@@ -109,11 +109,14 @@ Speech-Emotion-Recognition/
 ├── features/                  # Extracted MFCCs and spectrograms
 └── models/                    # Saved model weights
 
-🌱 Future Improvements
+### 🌱 Future Improvements
 
-Integrate attention mechanisms to enhance temporal feature learning
+🌟 Improvement 1️⃣ — Integrate Attention Mechanisms
+Enhance temporal feature learning and improve emotion context tracking.
 
-Experiment with transformer-based architectures (Wav2Vec2, HuBERT)
+🌟 Improvement 2️⃣ — Use Transformer Architectures
+Experiment with Wav2Vec 2.0 or HuBERT for end-to-end speech feature representation.
 
-Build a Streamlit app for real-time emotion detection
+🌟 Improvement 3️⃣ — Build a Streamlit Web App
+Create a real-time speech emotion detection interface for demo purposes.
 
