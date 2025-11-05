@@ -57,47 +57,58 @@ The CNN effectively captures emotional nuances in spectrograms, while the LSTM m
 
 Training and validation metrics:
 
-![Training Accuracy and Loss](image_5fac41.jpg)
+<p align="center">
+  <img src="images/training_accuracy_loss.png" alt="Training Accuracy and Loss" width="70%"/>
+</p>
 
----
 
 ## 🚀 How to Run
 
-### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/Speech-Emotion-Recognition.git
+🧩 Step 1️⃣ — Clone the Repository
+---------------------------------
+git clone https://github.com/sarthakkhurana815/Speech-Emotion-Recognition.git
 cd Speech-Emotion-Recognition
 
 
-2️⃣ Create and Activate Environment
+🧩 Step 2️⃣ — Create and Activate Environment
+---------------------------------------------
 python -m venv venv
-source venv/bin/activate  # Mac/Linux
-.\venv\Scripts\activate   # Windows
+source venv/bin/activate    # Mac/Linux
+.\venv\Scripts\activate     # Windows
 
 
-3️⃣ Install Dependencies
+🧩 Step 3️⃣ — Install Dependencies
+---------------------------------
 pip install -r requirements.txt
 
-4️⃣ Run the Notebook
 
-Open SER.ipynb in Jupyter or VS Code and execute all cells to:
+🧩 Step 4️⃣ — Run the Notebook
+------------------------------
+# Open the Jupyter Notebook
+jupyter notebook SER.ipynb
 
-Preprocess the dataset
+# Or open it directly in VS Code
+# Run all cells to:
+# - Preprocess the dataset
+# - Extract audio features
+# - Train and evaluate the CNN+LSTM model
 
-Extract audio features
-
-Train and evaluate the CNN+LSTM model
 
 🧩 Tech Stack
-Category	Tools
-Language	Python
-Deep Learning	TensorFlow, Keras
-Audio Processing	Librosa
-Data Handling	NumPy, Pandas
-Visualization	Matplotlib, Seaborn
-Dataset	RAVDESS
+--------------
+Category           Tools
+-------------------------------------
+Language           Python
+Deep Learning      TensorFlow, Keras
+Audio Processing   Librosa
+Data Handling      NumPy, Pandas
+Visualization      Matplotlib, Seaborn
+Dataset            RAVDESS
+
 
 📁 Project Structure
+--------------------
 Speech-Emotion-Recognition/
 │
 ├── SER.ipynb                  # Main Jupyter notebook
@@ -107,10 +118,9 @@ Speech-Emotion-Recognition/
 ├── features/                  # Extracted MFCCs and spectrograms
 └── models/                    # Saved model weights
 
+
 🌱 Future Improvements
-
-Integrate attention mechanisms to enhance temporal feature learning
-
-Experiment with transformer-based architectures (Wav2Vec2, HuBERT)
-
-Build a Streamlit app for real-time emotion detection
+----------------------
+1️⃣ Integrate attention mechanisms to enhance temporal feature learning
+2️⃣ Experiment with transformer-based architectures (Wav2Vec2, HuBERT)
+3️⃣ Build a Streamlit app for real-time emotion detection
