@@ -64,21 +64,28 @@ Training and validation metrics:
 
 ## 🚀 How to Run
 
- 🧩 Step 1️⃣ — Clone the Repository
-
+### 🧩 Step 1️⃣ — Clone the Repository
+```bash
 git clone https://github.com/sarthakkhurana815/Speech-Emotion-Recognition.git
 cd Speech-Emotion-Recognition
+```
+
 
 ### 🧩 Step 2️⃣ — Create and Activate Environment
+```bash
 python -m venv venv
 source venv/bin/activate  # Mac/Linux
 .\venv\Scripts\activate   # Windows
+```
+
 
 ### 🧩 Step 3️⃣ — Install Dependencies
+```bash
 pip install -r requirements.txt
+```
 
 ### 🧩 Step 4️⃣ — Run the Notebook
-
+```bash
 Open SER.ipynb in Jupyter Notebook or VS Code and execute all cells to:
 
 Preprocess the dataset
@@ -86,8 +93,10 @@ Preprocess the dataset
 Extract audio features
 
 Train and evaluate the CNN+LSTM model
+```
 
 ### 🧩 Tech Stack
+```bash
 | Category             | Tools               |
 | -------------------- | ------------------- |
 | **Language**         | Python              |
@@ -96,10 +105,10 @@ Train and evaluate the CNN+LSTM model
 | **Data Handling**    | NumPy, Pandas       |
 | **Visualization**    | Matplotlib, Seaborn |
 | **Dataset**          | RAVDESS             |
-
+```
 
 ### 📁 Project Structure
-
+```bash
 Speech-Emotion-Recognition/
 │
 ├── SER.ipynb                  # Main Jupyter notebook
@@ -108,6 +117,7 @@ Speech-Emotion-Recognition/
 ├── data/                      # Audio dataset (RAVDESS)
 ├── features/                  # Extracted MFCCs and spectrograms
 └── models/                    # Saved model weights
+```
 
 ### 🌱 Future Improvements
 
