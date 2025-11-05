@@ -1,34 +1,112 @@
-# Speech Emotion Recognition (SER)
-This project uses a deep learning model to classify emotions from audio speech files. It is built with TensorFlow/Keras and uses a hybrid **CNN+LSTM architecture**.
+🎙️ Speech Emotion Recognition (SER)
 
-- **Model**: A 2D Convolutional Neural Network (CNN) for feature extraction from spectrograms, followed by a Long Short-Term Memory (LSTM) network to understand the sequence and context of the audio.
-- **Dataset**: [RAVDESS Emotional Speech Audio](https://www.kaggle.com/datasets/uwrfkaggler/ravdess-emotional-speech-audio). The model was trained on 2,880 audio files covering 8 distinct emotions.
-- **Features**: MFCC, Chroma, and Mel Spectrograms.
-- **Final Result**: The model achieved a **86.5% validation accuracy** after implementing Early Stopping to prevent overfitting.
+This project focuses on detecting human emotions from speech using deep learning. The model learns emotional cues such as tone, pitch, and energy from audio signals to classify them into predefined emotional states.
 
----
+🧠 Overview
 
-## 📈 Results
+This repository implements a hybrid CNN + LSTM architecture for Speech Emotion Recognition (SER) on the RAVDESS Emotional Speech Audio Dataset
+.
+It extracts key acoustic features — MFCC, Chroma, and Mel Spectrograms — to capture both spectral and temporal characteristics of speech.
 
-The model was trained for 100 epochs with an Early Stopping callback monitoring validation loss. The training stopped automatically at epoch 29, which had the best performance.
+🏗️ Model Architecture
 
-| Metric | Score |
-| --- | --- |
-| **Validation Accuracy** | 86.5% |
-| **Training Accuracy** | 98.3% |
-| **Best Validation Loss** | 0.6761 |
+The SER model is composed of:
 
-The gap between the training and validation accuracy indicates some overfitting (common for this dataset size), which was successfully managed by the Early Stopping callback to save the best-generalized model.
+Feature Extraction
 
-![Training Accuracy and Loss Plots](image_5fac41.jpg)
+Mel-Frequency Cepstral Coefficients (MFCCs)
 
----
+Chroma Features
 
-## 🚀 How to Run
+Mel Spectrograms
 
-**1. Create the Environment:**
-Create and activate a Python virtual environment.
-```bash
+Deep Learning Pipeline
+
+CNN Layers → capture spatial feature maps from spectrograms.
+
+LSTM Layers → model temporal dependencies in speech signals.
+
+Dense Layers → classify emotion from learned features.
+
+Output Classes (8 Emotions):
+
+Neutral
+
+Calm
+
+Happy
+
+Sad
+
+Angry
+
+Fearful
+
+Disgust
+
+Surprised
+
+📊 Results
+Metric	Score
+Training Accuracy	98.3%
+Validation Accuracy	86.5%
+Best Validation Loss	0.6761
+Best Epoch (Early Stopping)	29 / 100
+
+Early stopping was used to minimize overfitting by monitoring validation loss.
+
+Model Insight:
+The CNN effectively captures emotional nuances in spectrograms, while the LSTM models the time-series emotion flow, resulting in robust recognition performance.
+
+🖼️ Visualizations
+
+Training and validation metrics:
+
+🚀 How to Run
+1️⃣ Clone the Repository
+git clone https://github.com/<your-username>/Speech-Emotion-Recognition.git
+cd Speech-Emotion-Recognition
+
+2️⃣ Create and Activate Environment
 python -m venv venv
-source venv/bin/activate  # On Mac/Linux
-.\venv\Scripts\activate    # On Windows
+source venv/bin/activate  # Mac/Linux
+.\venv\Scripts\activate   # Windows
+
+3️⃣ Install Dependencies
+pip install -r requirements.txt
+
+4️⃣ Run the Notebook
+
+Open SER.ipynb in Jupyter or VS Code and execute all cells to:
+
+Preprocess the dataset
+
+Extract audio features
+
+Train and evaluate the CNN+LSTM model
+
+🧩 Tech Stack
+Category	Tools
+Language	Python
+Deep Learning	TensorFlow, Keras
+Audio Processing	Librosa
+Data Handling	NumPy, Pandas
+Visualization	Matplotlib, Seaborn
+Dataset	RAVDESS
+📁 Project Structure
+Speech-Emotion-Recognition/
+│
+├── SER.ipynb                  # Main Jupyter notebook
+├── requirements.txt           # Dependencies
+├── README.md                  # Documentation
+├── data/                      # Audio dataset (RAVDESS)
+├── features/                  # Extracted MFCCs and spectrograms
+└── models/                    # Saved model weights
+
+🧩 Future Improvements
+
+Integrate attention mechanisms to enhance temporal feature learning
+
+Experiment with transformer-based architectures (Wav2Vec2, HuBERT)
+
+Build a Streamlit app for real-time emotion detection
