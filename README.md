@@ -96,7 +96,7 @@ Train and evaluate the CNN+LSTM model
 ```
 
 ### 🧩 Tech Stack
-```bash
+
 | Category             | Tools               |
 | -------------------- | ------------------- |
 | **Language**         | Python              |
@@ -105,7 +105,7 @@ Train and evaluate the CNN+LSTM model
 | **Data Handling**    | NumPy, Pandas       |
 | **Visualization**    | Matplotlib, Seaborn |
 | **Dataset**          | RAVDESS             |
-```
+
 
 ### 📁 Project Structure
 ```bash
